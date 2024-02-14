@@ -1,100 +1,96 @@
 <template>
 	<q-page class="flex flex-center bg-image">
-		<div class="column q-pa-lg">
-			<div class="row">
-				<q-img
-					src="https://res.cloudinary.com/dvy167slj/image/upload/v1707937413/ortegalab/ortegalabcloud.jpg"
-					spinner-color="white"
-				/>
-				<q-card
-					square
-					class="shadow-8 bg-white"
-					style="width: 300px; height: 260px"
-				>
-					<div class="row bg-blue-grey-8 justify-center q-pa-xs">
-						<span class="text-subtitle2 text-center text-white"
-							>PORTAL DE CONSULTAS v2.05</span
-						>
-					</div>
-					<div class="row">
-						<div class="column col-xs-12 q-pa-sm">
-							<q-input
-								v-model="login"
-								type="text"
-								label="No. de Identificación"
-								dense
-							/>
-						</div>
-						<div class="column col-xs-12 q-pa-sm">
-							<q-input
-								v-model="clave"
-								:type="isPwd ? 'password' : 'text'"
-								label="Clave - Por defecto su Identificación"
-								dense
-								@keyup.enter="logearse()"
-							>
-								<template v-slot:append>
-									<q-icon
-										:name="
-											isPwd
-												? 'visibility_off'
-												: 'visibility'
-										"
-										class="cursor-pointer"
-										@click="isPwd = !isPwd"
-									/>
-									<q-tooltip
-										class="bg-grey-6 text-caption"
-										anchor="bottom middle"
-										self="center middle"
-									>
-										{{
-											isPwd
-												? "Mostrar clave"
-												: "Ocultar clave"
-										}}
-									</q-tooltip>
-								</template>
-							</q-input>
-						</div>
-					</div>
-					<q-separator dark />
-					<div class="row">
-						<div class="column col-xs-12 q-pa-sm">
-							<q-btn
-								class="full-width text-white"
-								style="height: 40px"
-								color="blue"
-								label="Ingresar"
-								@click="logearse()"
-							/>
-						</div>
-					</div>
-					<div class="row">
-						<div class="column col-xs-12 q-pa-xs">
-							<q-btn
-								class="full-width text-blue-9"
-								style="font-size: 13px; height: 40px"
-								color="white"
-								flat
-								label="Recuperar Contraseña"
-								@click="editor = true"
-							/>
-						</div>
-					</div>
-					<div
-						class="row bg-blue-grey-8 justify-center items-center"
-						style="height: 30px"
+		<div class="row">
+			<q-img
+				src="https://res.cloudinary.com/dvy167slj/image/upload/v1707937413/ortegalab/ortegalabcloud.jpg"
+				spinner-color="white"
+			/>
+			<q-card
+				square
+				class="shadow-8 bg-white"
+				style="width: 300px; height: 260px"
+			>
+				<div class="row bg-blue-grey-8 justify-center q-pa-xs">
+					<span class="text-subtitle2 text-center text-white"
+						>PORTAL DE CONSULTAS v2.05</span
 					>
-						<a
-							:href="appStore.url_portal"
-							style="color: white"
-							target="_blank"
-							>{{ appStore.web_portal }}</a
-						>
+				</div>
+				<div class="row">
+					<div class="column col-xs-12 q-pa-sm">
+						<q-input
+							v-model="login"
+							type="text"
+							label="No. de Identificación"
+							dense
+						/>
 					</div>
-				</q-card>
-			</div>
+					<div class="column col-xs-12 q-pa-sm">
+						<q-input
+							v-model="clave"
+							:type="isPwd ? 'password' : 'text'"
+							label="Clave - Por defecto su Identificación"
+							dense
+							@keyup.enter="logearse()"
+						>
+							<template v-slot:append>
+								<q-icon
+									:name="
+										isPwd ? 'visibility_off' : 'visibility'
+									"
+									class="cursor-pointer"
+									@click="isPwd = !isPwd"
+								/>
+								<q-tooltip
+									class="bg-grey-6 text-caption"
+									anchor="bottom middle"
+									self="center middle"
+								>
+									{{
+										isPwd
+											? "Mostrar clave"
+											: "Ocultar clave"
+									}}
+								</q-tooltip>
+							</template>
+						</q-input>
+					</div>
+				</div>
+				<q-separator dark />
+				<div class="row">
+					<div class="column col-xs-12 q-pa-sm">
+						<q-btn
+							class="full-width text-white"
+							style="height: 40px"
+							color="blue"
+							label="Ingresar"
+							@click="logearse()"
+						/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column col-xs-12 q-pa-xs">
+						<q-btn
+							class="full-width text-blue-9"
+							style="font-size: 13px; height: 40px"
+							color="white"
+							flat
+							label="Recuperar Contraseña"
+							@click="editor = true"
+						/>
+					</div>
+				</div>
+				<div
+					class="row bg-blue-grey-8 justify-center items-center"
+					style="height: 30px"
+				>
+					<a
+						:href="appStore.url_portal"
+						style="color: white"
+						target="_blank"
+						>{{ appStore.web_portal }}</a
+					>
+				</div>
+			</q-card>
 		</div>
 
 		<!-- Para resetear la contraseña -->
