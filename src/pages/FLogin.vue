@@ -28,7 +28,7 @@
 						<div class="column col-xs-12 q-pa-sm">
 							<q-input
 								v-model="clave"
-								type="password"
+								:type="isPwd ? 'password' : 'text'"
 								label="Clave - Por defecto su Identificación"
 								dense
 								@keyup.enter="logearse()"
