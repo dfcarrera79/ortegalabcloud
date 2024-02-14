@@ -1,5 +1,5 @@
 <template>
-	<q-page class="row justify-center items-center bg-blue-grey-1">
+	<q-page class="flex flex-center bg-image">
 		<div class="column q-pa-lg">
 			<div class="row">
 				<q-img
@@ -31,7 +31,31 @@
 								type="password"
 								label="Clave - Por defecto su Identificación"
 								dense
-							/>
+								@keyup.enter="logearse()"
+							>
+								<template v-slot:append>
+									<q-icon
+										:name="
+											isPwd
+												? 'visibility_off'
+												: 'visibility'
+										"
+										class="cursor-pointer"
+										@click="isPwd = !isPwd"
+									/>
+									<q-tooltip
+										class="bg-grey-6 text-caption"
+										anchor="bottom middle"
+										self="center middle"
+									>
+										{{
+											isPwd
+												? "Mostrar clave"
+												: "Ocultar clave"
+										}}
+									</q-tooltip>
+								</template>
+							</q-input>
 						</div>
 					</div>
 					<q-separator dark />
@@ -130,6 +154,7 @@ const router = useRouter();
 const q = useQuasar();
 const appStore = useAppStore();
 const editor = ref(false);
+const isPwd = ref(true);
 const login = ref("");
 const clave = ref("");
 const numId = ref("");
@@ -213,3 +238,11 @@ const resetearClave = async () => {
 	);
 };
 </script>
+
+<style scoped>
+.bg-image {
+	background-image: url("https://res.cloudinary.com/dvy167slj/image/upload/v1707948537/background.jpg");
+	background-repeat: repeat;
+	background-size: cover;
+}
+</style>
