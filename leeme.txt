@@ -1,0 +1,23 @@
+Ejecutar la app
+npm run dev -- --port 8081
+
+instalar npm install vue-router-multiguard que sirve como midlleware para controlar el acceso
+npm install vue-router-multiguard
+
+para build spa
+    quasar build
+
+para build pwa
+    quasar build -m pwa
+
+tambien se puede llamar a la app con parametros
+    https://www.loxasoluciones-cloud.com:3000/#/
+    https://www.loxasoluciones-cloud.com:3000/#/?app=portal_docelectronico&propietario=loxa|labortega
+    https://www.loxasoluciones-cloud.com:3000/#/?app=portal_resultadoslab&propietario=loxa|labortega
+
+
+Laboratorio Ortega
+    http://www.ortegalabcloud.com:8081/#/?app=portal_resultadoslab
+
+
+ver mas en el archivo router

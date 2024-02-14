@@ -1,0 +1,174 @@
+// app global css in SCSS form
+html{
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
+}
+
+body {
+    overscroll-behavior-y: contain;
+}
+
+.bg-header-fotter-drawer{
+    background:$red-4;
+    color: white;
+}
+
+.bg-toolbar{
+    background:$red-4;
+    color: white;
+}
+
+.drawer{
+    background-color:$blue-grey-9;
+}
+
+.drawer_menu_item_expand{
+    background-color: $blue-grey-9;
+    color: $grey-1;
+}
+
+.drawer_menu_item_expand-icon{
+    color: $amber-1;
+}
+
+.drawer_menu_item{
+    background-color: $blue-grey-9;
+    color: $grey-1;
+}
+
+.drawer_menu_item_home{
+    background-color: $blue-grey-9;
+    color: $amber-1;
+}
+
+.bg-modal-title{
+    background: $red-4;
+    color: $grey-1;
+    font-size: 20px;
+}
+
+.bg-admin_list-footer{
+    background: white;
+    color: $blue-grey-7;
+}
+
+.bg-modal-footer{
+    background: $blue-grey-7;
+    color: white;
+}
+
+// Custom q-select
+.q-select{
+    background-color:white;
+}
+
+.q-select .q-field__native,
+.q-select .q-field__prefix,
+.q-select .q-field__suffix,
+.q-select .q-field__label,
+.q-select .q-select__dropdown-icon{
+    color: $grey-10;
+}
+
+// fin custom q-select
+
+// Custom q-input
+.q-input{
+    background-color:white;
+}
+
+.q-input .q-field__native,
+.q-input .q-field__prefix,
+.q-input .q-field__suffix,
+.q-input .q-field__label,
+.q-input .q-select__dropdown-icon{
+    color: $grey-10;
+}
+// fin custom q-input
+
+.my-sticky-header-column-table-admin {
+
+    td:first-child {
+      background-color: white;
+    }
+
+    tr th {
+      position: sticky;
+      z-index: 2;
+      background-color: white;
+    }
+
+    thead tr:last-child th {
+      top: 48px;
+      z-index: 3;
+      background-color: white;
+    }
+
+    thead tr:first-child th {
+      top: 0;
+      z-index: 1;
+      background-color: white;
+    }
+
+    tr:first-child th:first-child {
+      z-index: 3;
+      background-color: white;
+    }
+
+    td:first-child {
+      z-index: 1;
+      background-color: white;
+    }
+
+    td:first-child, th:first-child {
+      position: sticky;
+      left: 0;
+      background-color: white;
+    }
+
+  // la ultima columna tambien
+    td:last-child, th:last-child {
+      position: sticky;
+      right: 0;
+      background-color: white;
+    }
+}
+
+.my-sticky-header-column-table {
+	max-height: 100vh;
+  	max-width: 99vw;
+
+  	td:first-child {
+		background-color: $grey-1;
+  	}
+
+  	tr th {
+    	position: sticky;
+    	z-index: 2;
+    	background: #fff;
+  	}
+
+  	thead tr:last-child th {
+    	top: 48px;
+    	z-index: 3;
+  	}
+
+  	thead tr:first-child th {
+    	top: 0;
+    	z-index: 1;
+  	}
+
+  	tr:first-child th:first-child {
+		z-index: 3;
+  	}
+
+  	td:first-child {
+    	z-index: 1;
+  	}
+
+  	td:first-child, th:first-child {
+    	position: sticky;
+		left: 0;
+  	}
+}
+
