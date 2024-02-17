@@ -2,7 +2,6 @@
 	"name": "portal-documentos",
 	"version": "0.0.1",
 	"description": "A Quasar Project",
-	"proxy": "https://186.5.111.32:3001",
 	"productName": "Portal de consultas",
 	"author": "marcovinab.loxasoluciones",
 	"private": true,
