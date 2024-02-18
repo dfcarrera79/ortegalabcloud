@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://186.5.111.32:3001/api/*"
-  status = 200
-  force = true
