@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useAppStore = defineStore("oApp", {
 	state: () => ({
 		//api:'https://www.loxasoluciones-cloud.com:7171',
-		api: "https://186.5.111.32:8181",
+		api: "https://ortegalab-cloud.com:8181",
 		//api:'http://192.168.50.14:7070',
 		usuario: {
 			codigo_perfil: 0,
