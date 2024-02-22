@@ -15,7 +15,7 @@ export const useAppStore = defineStore("oApp", {
 		},
 		documentos_electronicos: [],
 		documentos_laboratorio: [],
-		app: "portal", // portal, portal_docelectronico, portal_resultadoslab
+		app: "portal_resultadoslab", // portal, portal_docelectronico, portal_resultadoslab
 		nombre_portal: "OrtegaLab",
 		web_portal: "www.ortegalab.com",
 		url_portal: "https://ortegalab.com/",
